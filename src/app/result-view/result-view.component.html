@@ -1,0 +1,27 @@
+<div class="cotain d-flex justify-content-center">
+    <div class="col-sm-9 mt-5 mb-5">
+        <h1 class="text-center mb-3">RESULTS</h1>
+        <div class="table-responsive-sm">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Exam</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of testdata">
+                    <th scope="row">1</th>
+                    <td>{{i.name}}</td>
+                    <td>{{i.des}}</td>
+                    <td>Click <a
+                        [routerLink]="['/check-result',i.name]">here</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

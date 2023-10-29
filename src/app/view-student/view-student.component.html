@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+        <h1 class="mb-5 mt-3">Manage Student</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Manage Student</li>
+            </ol>
+          </nav>
+    </div>
+    <input placeholder="Search by Id" class="form-control mb-3 w-50" type="text"  (keyup)="searchid($event)">
+
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button class="btn btn-outline-primary" (click)="notactive()">Not Activated</button>
+      <button class="btn btn-outline-primary" (click)="all()">All</button>
+      <button class="btn btn-outline-primary" (click)="active()">Active</button>
+    </div>
+    <div class="table-responsive-sm">
+        <table *ngIf="sactive" class="table table-dark table-striped w-75 mt-3 m-b3">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th>Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">class</th>
+                <th scope="col">Email</th>
+                <th>Phone Number</th>
+                <th>Status</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of studentData | filter :searchData:'status' | search :searchId:'sid',let j = index">
+                <th scope="row">{{j+1}}</th>
+                <td>{{i.sid}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.cl}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.pno}}</td>
+                <td (click)="supdate(i.sid)"><i [ngStyle]="{'color':(i.status==false)? '#f50505':'#12af1d'}"
+                    class="fa-solid fa-circle fa-lg"></i></td>
+                <td (click)="delete(i.sid)"><i class="fa-solid fa-trash fa-lg" style="color: #f20707;"></i></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+<div>
+    <div class="contain">
+        <div class="centered">
+            <h1 class="text-center main-head"><strong>BETTER EDUCATION FOR <br> A BETTER WORLD</strong></h1>
+        </div>
+        <div class="row justify-content-center w-100 topic">
+            <div class="col-sm-3 ex ">
+                <h4 class="head1">Quality Teachers</h4>
+                <div class="d-flex">
+                    <i class="fa-solid fa-chalkboard-user fa-3x pe-1" style="color: #c5ea10;"></i>
+                    <p class="text-white"> "Our teachers are not just educators; they are the guiding stars on the path
+                        of
+                        knowledge."</p>
+                </div>
+            </div>
+            <div class="col-sm-3 ex">
+                <h4 class="head1">Best Carriculam</h4>
+                <div class="d-flex">
+                    <i class="fa-solid fa-globe fa-3x pe-1" style="color: #ffeb0a;"></i>
+                    <p class="text-white"> "We offer a curriculum that's aligned with global standards, ensuring our
+                        students receive an education that's recognized worldwide."</p>
+                </div>
+            </div>
+            <div class="col-sm-3 ex ">
+                <h4 class="head1">For the Future</h4>
+                <div class="d-flex">
+                    <i class="fa-solid fa-forward fa-3x pe-1" style="color: #ddec13;"></i>
+                    <p class="text-white"> "Our commitment to quality education goes beyond the classroom. We prepare
+                        students for success in a rapidly changing world."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="test">
+        <h1 class="head2">RESULTS</h1>
+        <marquee behavior="" direction="">
+            <p *ngFor="let i of testdata | filter: true :'status' " style="display:inline" class="tag"><i class="fa-solid fa-certificate pe-1"
+                    style="color: #c525d0;"></i>{{i.name}}: {{i.des}} click <a
+                    [routerLink]="['/check-result',i.name]">here</a></p>
+        </marquee>
+    </div>
+<div style="width: 100%;" class="d-flex justify-content-center">
+        <div class="contain2">
+            <div class="data col-md-7">
+                <h2>Welcome to Model High School</h2>
+                <p>
+                    At Model High School, we believe in nurturing young minds to help them reach their full potential.
+                    Established
+                    in 2000, our high school has been a beacon of education in the beautiful state of Kerala. Our
+                    commitment
+                    to excellence in education, combined with a rich cultural heritage, makes us a unique and sought-after
+                    institution.
+                </p>
+    
+            </div>
+    
+        </div>
+</div>
+    <div class="row contain3">
+        <div class="col-sm-7 p-5"
+            style=" background-color: rgb(231, 93, 93); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+            <h2>Our Mission </h2>
+            <p>
+                We are dedicated to providing a holistic education that not only focuses on academic excellence but also
+                on character development. Our mission is to create a conducive and stimulating learning environment
+                where students can flourish academically, socially, and emotionally.
+            </p>
+
+        </div>
+        <div class="col-sm-3 mt-3">
+            <h2>NOTICE</h2>
+            <ul>
+                <li>All Students must register </li>
+                <li>Results are avilable for registerd students</li>
+                <li>Check your results</li>
+                <li>Contact School Authority for more details</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row contain4 justify-content-center">
+        <div class="col-sm-3 point">
+            <h2>Academic Excellence</h2>
+            <p>
+                At Model High School, we are committed to academic excellence. Our dedicated and experienced faculty members
+                ensure that students receive a well-rounded education that prepares them for the challenges of the 21st
+                century.
+            </p>
+
+        </div>
+        <div class="col-sm-3 point">
+            <h2>State-of-the-Art Facilities</h2>
+            <p>Our school is equipped with modern facilities and resources to support the educational needs of our
+                students. From well-equipped classrooms to science and computer labs, our infrastructure is designed to
+                enhance the learning experience.</p>
+        </div>
+        <div class="col-sm-3 point">
+            <h2>Community Engagement</h2>
+            <p>
+                We encourage our students to engage with the community through various social and environmental
+                initiatives. We believe that a sense of social responsibility is an integral part of education.
+            </p>
+        </div>
+
+    </div>
+    <div class="row contain5">
+        <div class="col-sm-7">
+            <h2 class="text-white">JOIN US.</h2>
+            <p>
+                We invite students and parents to become part of the Model HighSchool family, where education goes beyond
+                the classroom and where every child is encouraged to dream, explore, and excel. Together, we can shape a
+                brighter future for the next generation.
+
+                Thank you for considering [School Name] for your child's education. We look forward to embarking on this
+                educational journey with you.
+
+
+            </p>
+
+        </div>
+        <div class="col-md-5">
+            <img style="width: 100%;" src="https://i.postimg.cc/XJL6h5Nc/pexels-max-fischer-5212352.jpg" alt="">
+        </div>
+    </div>
+
+</div>

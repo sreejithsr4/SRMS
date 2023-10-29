@@ -1,0 +1,32 @@
+form{
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+.contain{
+    background: linear-gradient(to top left, #0099ff 0%, #00ffcc 100%);
+}
+.head{
+    color:#00ffcc ;
+}
+.button1{
+    margin-bottom: 15px;
+    height: 40px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: black;
+}
+.button2{
+    margin-bottom: 15px;
+    height: 40px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color:#00ffcc;
+    color: white;
+}

@@ -1,0 +1,26 @@
+<div class="contain body d-flex justify-content-center">
+    
+
+        <div class="col-sm-6 mt-3 mb-3">
+          <h1>Edit Teacher</h1>
+
+            <form [formGroup]="teacherForm" action="" class="" >
+                <label for="">Name:</label>
+                <input [(ngModel)]="teacherdata.name" [ngModelOptions]="{standalone: true}" type="text" id="name" class="form-control mb-4" name="name">
+                <label for="">Subject:</label>
+                <input [(ngModel)]="teacherdata.subject" [ngModelOptions]="{standalone: true}" type="text" id="" name="sub" id="sub" class="form-control mb-4">
+                <button (click)="update()" class="btn btn-info" type="submit">update</button>
+
+                <h3 class="mt-3 text-center">Change Password</h3>
+                <input class="mb-3 form-control" formControlName="psw" type="text" placeholder="New Password" name="psw" id="psw">
+                <input formControlName="cpsw" class="mb-3 form-control" type="text" placeholder="Confirm New Password" name="cpsw" id="cpsw">
+                <p *ngIf="this.pswCheck" class="text-danger ">Password doesnot Match</p>
+                <input class="mb-3 form-control" formControlName="oldpsw" placeholder="Enter Current Password" type="text" name="oldpsw" id="opsw">
+                <button (click)="change()" class="btn btn-success">Submit</button>
+
+
+
+            </form>
+        </div>
+</div>
+

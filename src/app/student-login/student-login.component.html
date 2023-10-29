@@ -1,0 +1,16 @@
+
+    <div class="d-flex contain justify-content-center">
+     <div class="col-sm-5 p-5 ">
+            <form [formGroup]="student" action="" class="d-flex flex-column p-5 " >
+                <h1 class="head">Login</h1>
+                <input formControlName="id" class="form-control mb-3" type="text" placeholder="Id" id="uname" name="uname">
+                <input formControlName="psw" class="form-control mb-3" type="password" placeholder="Password" id="psw" name="psw">
+                <button (click)="login()" class="button1"><strong>Login</strong></button>
+                <button class="button2" (click)="signup()"><strong>signup</strong></button>
+            </form>
+     </div>
+    </div>
+
+    
+
+

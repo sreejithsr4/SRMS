@@ -1,0 +1,29 @@
+<div class="contain">
+    <div class="col-sm-8 ms-5 mb-3 head p-2 d-flex ">
+        <div class="col-sm-3">
+            <img style="width: 100%;"
+                src="https://i.postimg.cc/fLdvkn9Q/default-profile-account-unknown-icon-black-silhouette-free-vector-1.jpg"
+                alt="">
+
+        </div>
+        <div class="pt-4">
+            <h1>{{studentData.name}}</h1>
+            <p>Student Id:{{studentData.sid}}</p>
+            <button (click)="edit()" class="button1"><i class="fa-solid fa-pen pe-2" style="color: #ebf0fa;"></i>Edit</button>
+            <button (click)="logout()" class="button2">Logout</button>
+        </div>
+
+
+    </div>
+    <div class="col-sm-7 info mt-5 ms-5 p-3">
+        <h4>Information</h4>
+
+      <div class="ps-3 pt-3">
+            <p><strong>Age:</strong>  {{studentData.age}}</p>
+            <p><strong>Class:</strong>  {{studentData.cl}}</p>
+            <p><strong>email:</strong>  {{studentData.email}}</p>
+            <p><strong>Phone No:</strong>  {{studentData.pno}}</p>
+      </div>
+    </div>
+
+</div>

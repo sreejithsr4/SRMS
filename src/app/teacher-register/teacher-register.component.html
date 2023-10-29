@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center m-5 p-5">
+<div class="col-sm-6">
+        <form [formGroup]="tRegister" action="" class="d-flex flex-column border border-dark p-5">
+            <h1 class="text-decoration-underline mb-3">Registration</h1>
+            <input formControlName="id" class="mb-3" type="text" placeholder="Id" name="id" id="id">
+            <p class="text-danger" *ngIf="this.tRegister.get('id')?.errors && this.tRegister.get('id')?.touched">Enter Valid Id</p>
+            <input formControlName="name"  class="mb-3" type="text" placeholder="Name" name="name" id="id">
+            <p *ngIf="this.tRegister.get('name')?.errors&&this.tRegister.get('name')?.touched" class="text-danger">Enter valid Name</p>
+            <input  class="mb-3 form-control" formControlName="subject" name="subject" id="subject" placeholder="Subject">
+            <p *ngIf="this.tRegister.get('subject')?.errors&&this.tRegister.get('subject')?.touched" class="text-danger">Enter valid subject</p>
+
+            <input formControlName="psw"  class="mb-3" type="text" placeholder="Password" name="psw" id="psw">
+            <p *ngIf="this.tRegister.get('psw')?.errors&&this.tRegister.get('psw')?.touched" class="text-danger">Enter valid Password</p>
+            <input formControlName="cpsw" class="mb-3" type="text" placeholder="Confirm Password" name="cpsw" id="cpsw">
+            <p *ngIf="this.pswCheck" class="text-danger">Password doesnot Match</p>
+            <button (click)="signup()" class="btn btn-success">Submit</button>
+        </form>
+</div>
+</div>
+

@@ -1,0 +1,22 @@
+<nav class="navbar bg-dark navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#"><i class="fa-solid fa-school fa-lg pb-3 pe-2"
+        style="color: #ffffff;"></i>
+      <h3 class="text-white"><strong>MGH</strong></h3>
+    </a>
+    <button *ngIf="data" class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon text-white"></span>
+    </button>
+
+  </div>
+
+  <div *ngIf="data" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav position">
+      <a class="nav-link" routerLink="/result-view"><strong>Result</strong></a>
+      <a class="nav-link" routerLink="/student-login"><strong>Student</strong></a>
+      <a class="nav-link" routerLink="/teacher-login"><strong>Teacher</strong></a>
+      <a class="nav-link" routerLink="/login"><strong>Admin</strong></a>
+    </div>
+  </div>
+</nav>

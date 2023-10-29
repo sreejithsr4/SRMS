@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="col-sm-6 class-form m-5">
+        <form (ngSubmit)="addNoti()" [formGroup]="notification">
+            <h1 class="text-center mb-4">Add Test</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Test</li>
+                </ol>
+              </nav>
+            <input formControlName="name" class="form-control mb-3" type="text" placeholder="Test Name" id="Title"
+                name="name">
+            <p Enter class="text-danger"
+                *ngIf="this.notification.get('name')?.errors&&this.notification.get('name')?.touched">Enter Valid test
+                Name</p>
+            <textarea formControlName="des" class="form-control  mb-3" name="" id="" cols="10" rows="5"
+                placeholder="Description" name="des" id="des"></textarea>
+            <p Enter class="text-danger"
+                *ngIf="this.notification.get('des')?.errors&&this.notification.get('des')?.touched">Enter Valid
+                Description</p>
+
+            <div class="d-flex justify-content-end"> <button class="btn btn-warning ms-5 mb-5"> Submit</button></div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="contain body d-flex justify-content-center">
+    <div class="col-sm-7 form">
+        <h1 class="mb-3">Edit Mark</h1>
+        <form (ngSubmit)="updateScore()"  [formGroup]="score" action="">
+            <input formControlName="score" class="form-control mb-3" placeholder="Score" type="text" name="score"
+                id=" score">
+            <input class="form-control mb-2" formControlName="fullscore" type="text" name="fullscore" id="fullscore"
+                placeholder="Maximum Mark">
+                
+           <div class="d-flex justify-content-end"> <button type="submit" class="btn btn-primary">Update</button></div>
+        </form>
+    </div>
+</div>

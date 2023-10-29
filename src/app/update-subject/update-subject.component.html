@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+            <div class="col-md-6 m-5">
+                <h1 class="mb-4">Update Subject</h1>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+                    <li class="breadcrumb-item"><a routerLink="/view-subject">Subject</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Update Subject</li>
+                  </ol>
+                </nav>
+                <form action="" >
+                  <label for="">Subject Name:</label>
+                    <input [(ngModel)]="subjectdata.name"  name="name" id="name" class="form-control mb-2" type="text">
+                    <label for="">Subject Code:</label>
+                    <input [(ngModel)]="subjectdata.code"  name="code" id="code" class="form-control mb-2" type="text" >
+                    <div class="d-flex justify-content-end"><button (click)="update()"  class="btn btn-primary"> Update</button></div>
+                    </form>
+            </div>
+    </div>
+    </div>
+    

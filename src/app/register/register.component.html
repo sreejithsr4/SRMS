@@ -1,0 +1,29 @@
+
+    <div class="d-flex justify-content-center m-5 p-5">
+<div class="col-sm-6">
+            <form [formGroup]="sRegister" action="" class="d-flex flex-column border border-dark p-5">
+                <h1 class="text-decoration-underline mb-3">Registration</h1>
+                <input formControlName="id" class="mb-3" type="text" placeholder="Id" name="id" id="id">
+                <p class="text-danger" *ngIf="this.sRegister.get('id')?.errors && this.sRegister.get('id')?.touched">Enter Valid Id</p>
+                <input formControlName="name"  class="mb-3" type="text" placeholder="Name" name="name" id="id">
+                <p *ngIf="this.sRegister.get('name')?.errors&&this.sRegister.get('name')?.touched" class="text-danger">Enter valid Name</p>
+                <input formControlName="age" class="mb-3" type="text" placeholder="Age" name="age" id="age">
+                <p *ngIf="this.sRegister.get('age')?.errors&&this.sRegister.get('age')?.touched" class="text-danger">Enter valid Age</p>
+    
+                <select formControlName="cl" name="" id="">
+                    <option value="">Select Class</option>
+                    <option *ngFor="let i of classdata" [value]="i.name">{{i.name}}</option>
+                </select>
+    
+                <input formControlName="pno" class="mb-3" type="text" placeholder="Phone Number" name="pno" id="pno">
+                <p *ngIf="this.sRegister.get('pno')?.errors&&this.sRegister.get('pno')?.touched" class="text-danger">Enter valid Phone Number</p>
+                <input formControlName="eid" class="mb-3" type="text" placeholder="Email Id" name="eid" id="eid">
+                <p *ngIf="this.sRegister.get('eid')?.errors&&this.sRegister.get('eid')?.touched" class="text-danger">Enter valid Emailid</p>
+                <input formControlName="psw"  class="mb-3" type="text" placeholder="Password" name="psw" id="psw">
+                <p *ngIf="this.sRegister.get('psw')?.errors&&this.sRegister.get('psw')?.touched" class="text-danger">Enter valid Password</p>
+                <input formControlName="cpsw" class="mb-3" type="text" placeholder="Confirm Password" name="cpsw" id="cpsw">
+                <p *ngIf="this.pswCheck" class="text-danger">Password doesnot Match</p>
+                <button (click)="signup()" class="btn btn-success">Submit</button>
+            </form>
+</div>
+    </div>

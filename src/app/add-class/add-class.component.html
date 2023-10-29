@@ -1,0 +1,33 @@
+<div class="container">
+<div class="col-md-7 class-form m-5">
+    <h2>Add Class</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add Class</li>
+      </ol>
+    </nav>
+    <form [formGroup]="addclass">
+      <div class="form-group">
+        <label for="className">Class Name</label>
+        <input formControlName="name" type="text" id="className" name="className" placeholder="Enter class name">
+        <p class="text-danger text-center" *ngIf="this.addclass.get('name')?.errors&&this.addclass.get('name')?.touched">
+          Enter a valid Class Name</p>
+      </div>
+      <div class="form-group">
+        <label for="classNumber">Class Number</label>
+        <input formControlName="numerical" type="number" id="classNumber" name="classNumber"
+          placeholder="Enter class number">
+          <p class="text-danger text-center" *ngIf="this.addclass.get('numerical')?.errors&&this.addclass.get('numerical')?.touched">
+            Enter a valid Class Number</p>
+      </div>
+      <div class="form-group">
+        <label for="division">Division</label>
+        <input formControlName="division" type="text" id="division" name="division" placeholder="Enter division">
+        <p class="text-danger text-center" *ngIf="this.addclass.get('division')?.errors&&this.addclass.get('division')?.touched">
+          Enter a valid Class Division</p>
+      </div>
+      <button (click)="addOneClass()" class="add-button">Add Class</button>
+    </form>
+</div>
+</div>

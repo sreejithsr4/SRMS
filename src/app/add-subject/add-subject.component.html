@@ -1,0 +1,21 @@
+<div class="container">
+<div class="row m-5">
+        <div class="col-md-6">
+            <h1 class="mb-4">Add Subject</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Add Subject</li>
+                </ol>
+              </nav>
+            <form action="" [formGroup]="subject">
+                <input formControlName="name" name="name" id="name" class="form-control mb-2" type="text" placeholder="Subject Name">
+                <p *ngIf="this.subject.get('name')?.errors&&this.subject.get('name')?.touched" class="text-danger">Enter Valid Subject</p>
+                <input formControlName="code" name="code" id="code" class="form-control mb-2" type="text" placeholder="Subject Code">
+                <p *ngIf="this.subject.get('code')?.errors&&this.subject.get('code')?.touched" class="text-danger">Enter Valid Code</p>
+
+                <div class="d-flex justify-content-end"><button (click)="addsub()" class="btn btn-primary"> Submit</button></div>
+                </form>
+        </div>
+</div>
+</div>

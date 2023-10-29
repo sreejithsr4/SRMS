@@ -1,0 +1,30 @@
+.sub1,.sub2,.sub3,.sub4,.sub5{
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.sub1{
+  background-color: #FF5733;
+}
+.sub2{
+  background-color: #FFBD33;
+}
+.sub3{
+  background-color: #DBFF33;
+}
+.sub4{
+  background-color: #33FF57;
+}
+.sub5{
+  background-color: #248de4;
+}
+.dash{
+  height: 50px;
+  width: 100%;
+  background-color: rgb(182, 187, 190);
+}
+.side{
+  background-color: black;
+  width: 250px;
+  height: 100%;
+}

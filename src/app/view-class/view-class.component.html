@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+        <h1 class="text-center mt-3">Manage Class</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+            <li class="breadcrumb-item active" aria-current="page">view Classes</li>
+          </ol>
+        </nav>
+        
+    </div>
+<div class="d-flex justify-content-center">
+      <div class="col-sm-7">
+          <table class="table table-bordered border-primary mt-3 mb-3">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Numerical</th>
+                  <th>Division</th>
+                  <th scope="col">Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of classData,let j=index">
+                  <th scope="row">{{j+1}}</th>
+                  <td>{{i.name}}</td>
+                  <td>{{i.numerical}}</td>
+                  <td>{{i.division}}</td>
+                  <td><i (click)="remove(i._id)" class="fa-regular fa-trash-can fa-lg btn" style="color: #fc0303;"></i></td>
+                </tr>
+  
+              </tbody>
+            </table>
+      </div>
+</div>
+
+</div>

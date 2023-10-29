@@ -1,0 +1,33 @@
+input{
+    border:none;
+    border-bottom: 2px solid black;
+}
+
+    input:focus{
+        border-bottom: 2px solid rgb(34, 133, 247);
+       outline: none;
+       animation-name: example;
+       animation-duration: .5s ;
+      }
+      @keyframes example {
+        0%   {border-bottom: 2px solid rgb(247, 248, 248);width: 10%;}
+        10%  {border-bottom: 2px solid rgb(184, 213, 247);width: 20%;}
+        30%  {border-bottom: 2px solid rgb(167, 206, 250);width:30%}
+        50% {border-bottom: 2px solid rgb(117, 176, 245);width: 50%;}
+        70%  {border-bottom: 2px solid rgb(83, 159, 247);width: 70%;}
+        100%  {border-bottom: 2px solid rgb(28, 130, 247);width: 100%;}
+
+      }
+      select{
+        border:none;
+        border-bottom: 2px solid black;
+        margin-bottom: 10px;
+      }
+      select:focus{
+        border-bottom: 2px solid rgb(34, 133, 247);
+       outline: none;
+       animation-name: example;
+       animation-duration: .5s ;
+      }
+
+  

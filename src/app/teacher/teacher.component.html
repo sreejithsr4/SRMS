@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="col-sm-8 d-flex mt-5 head">
+        <div class="col-sm-3">
+            <img style="width: 100%;"
+                src="https://i.postimg.cc/fLdvkn9Q/default-profile-account-unknown-icon-black-silhouette-free-vector-1.jpg"
+                alt="">
+
+        </div>
+        <div class="p-2 ">
+            <h1>{{teacherdata.name}}</h1>
+            <p>Teacher Id:{{teacherdata.tid}}</p>
+            <p>Subject :{{teacherdata.subject}}</p>
+            <button (click)="editinfo()" class="button1"><i class="fa-solid fa-pen pe-2" style="color: #ebf0fa;"></i>Edit</button>
+            <button (click)="logout()" class="button2">Logout</button>
+            <button (click)="addmark()" class="button3">Add Mark</button>
+            <button (click)="editMark()" class="button4">Evaluated Answer Sheets</button>
+        </div>
+
+    </div>
+
+    <div class=" m-5">
+        <div class="col-sm-7">
+
+            <form (ngSubmit)="addScore()" *ngIf="active" [formGroup]="score" action="">
+                <h1 class=" text-center mb-2">Add Mark</h1>
+                <input formControlName="sid" placeholder="Student Id" class="form-control mb-3" type="text" name=""
+                    id="">
+                <input formControlName="score" class="form-control mb-3" placeholder="Score" type="text" name="score"
+                    id=" score">
+                <input class="form-control mb-2" formControlName="fullscore" type="text" name="fullscore" id="fullscore"
+                    placeholder="Maximum Mark">
+                <label for="">Select Subject Code</label>
+                <select formControlName="code" name="code" id="code" class="form-select mb-3">
+                    <option *ngFor="let i of subdata" [value]="i.code">{{i.code}}</option>
+                </select>
+                <label for="">Select Test</label>
+                <select formControlName="test" name="test" id="test" class="form-select mb-3">
+                    <option *ngFor="let i of testData" [value]="i.name">{{i.name}}</option>
+                </select>
+                <div class="d-flex justify-content-end"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+
+        </div>
+<div class="col-sm-11">
+            <div *ngIf="editactive" class="table-responsive-sm">
+                <input class="form-control mb-3 mt-2 w-75" type="text" placeholder="Search Student Id" (keyup)="searchsid($event)">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Student Id</th>
+                            <th>Subject Code</th>
+                            <th scope="col">Test</th>
+                            <th scope="col">Mark</th>
+                            <th>Maximum Mark</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of evaluated | search :searchId:'sid',let j=index">
+                            <th scope="row">{{j+1}}</th>
+                            <td>{{i.sid}}</td>
+                            <td>{{i.subcode}}</td>
+                            <td>{{i.test}}</td>
+                            <td>{{i.mark}}</td>
+                            <td>{{i.fullmark}}</td>
+                            <td (click)="edit(i._id)"><i class="fa-solid fa-pen fa-lg" style="color: #12af1d;"></i></td>
+                            <td (click)="delete(i._id)"><i class="fa-solid fa-trash" style="color: #ec0909;"></i></td>
+                        
+                        </tr>
+    
+                    </tbody>
+                </table>
+    
+            </div>
+</div>
+
+    </div>
+</div>

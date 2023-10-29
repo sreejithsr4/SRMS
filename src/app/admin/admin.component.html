@@ -1,0 +1,164 @@
+<div class="dash d-flex justify-content-between">
+  <h1>DASHBOARD</h1>
+<div class="mt-1">
+    <button (click)="logout()" class="btn btn-danger me-3">Logout</button>
+    <a class="btn btn-dark me-3 ps-2 pe-2" data-bs-toggle="collapse" href="#collapseExample" role="button"
+      aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-bars fa-2xl mt-3"
+        style="color: #f0f2f4;"></i></a>
+</div>
+</div>
+
+<div class="d-flex">
+  <div class="collapse side bg-dark" id="collapseExample">
+    <div class="accordion accordion-flush bg-dark" id="accordionFlushExample">
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Test
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="accordion-body">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" routerLink="/notification">Add</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" routerLink="/view-test" >Manage Test</a>
+                </li>
+              
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Classes
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" routerLink="/add-class">Add</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/view-class">Manage Class</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Teachers
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" routerLink="/manage-teacher">Manage Teachers</a>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            Subject
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" routerLink="/add-subject">Add Subject</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" routerLink="/view-subject">Manage Subject</a>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            Students
+          </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/view-student">Manage Students</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            Admin
+          </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/view-admin">Manage Admin</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid ">
+<!-- control panel -->
+    <div class="row justify-content-around mt-5 mb-5">
+      <div class="col-md-5 mb-4 sub1">
+        <h2>Teachers <span>{{teacherdata.length}}</span></h2>
+        <i class="fa-solid fa-chalkboard-user fa-2xl" style="color: #e3380d;"></i>
+      </div>
+      <div class="col-md-5 mb-4 sub2">
+        <h2>Students <span>{{studentData.length}}</span></h2>
+        <i class="fa-solid fa-graduation-cap fa-2xl" style="color: #e27c28;"></i>
+      </div>
+      <div class="col-md-5 sub3 mb-4">
+        <h2>Test {{testData.length}}</h2>
+        <i class="fa-solid fa-file fa-2xl" style="color: #e2f063;"></i>
+      </div>
+      <div class="col-md-5 sub4 mb-4">
+        <h2>Classes <span>{{classdata.length}}</span></h2>
+        <i class="fa-solid fa-people-roof fa-2xl" style="color: #5e8f1e;"></i>
+      </div>
+      <div class="col-md-5 mb-4 sub5">
+        <h2>Subjects <span>{{subjectdata.length}}</span></h2>
+        <i class="fa-solid fa-people-roof fa-2xl" style="color: #5893ec;"></i>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+        <h1 class="text">Manage Teacher</h1>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Manage Teachers</li>
+        </ol>
+      </nav>
+      <input placeholder="Search by Id" class="form-control mb-3 w-50" type="text" (keyup)="searchid($event)">
+
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+  <button class="btn btn-outline-primary" (click)="notactive()">Not Activated</button>
+  <button class="btn btn-outline-primary" (click)="all()">All</button>
+  <button class="btn btn-outline-primary" (click)="active()">Active</button>
+</div>
+ 
+<div class="table-responsive-sm mt-5 mb-3">
+        <table class="table table-dark table-striped mb-5">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th>Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Subject</th>
+                <th>Status</th>
+                <th>change</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of teacherdata | filter :searchData:'status' | search :searchId:'tid',let j = index">
+                <th scope="row">{{j+1}}</th>
+                <td>{{i.tid}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.subject}}</td>
+                <td>{{i.status}}</td>
+                <td (click)="update(i.tid)"><i [ngStyle]="{'color':(i.status==false)? '#f50505':'#12af1d'}"
+                    class="fa-solid fa-circle fa-lg"></i></td>
+                <td (click)="delete(i.tid)"><i class="fa-solid fa-trash fa-lg" style="color: #f20707;"></i></td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+</div>
+

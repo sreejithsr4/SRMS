@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 ">
+            <h2>Edit Test</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+                  <li class="breadcrumb-item"><a routerLink="/view-test">Manage Test</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Edit Test</li>
+                </ol>
+              </nav>
+            <form class="m-3 body">
+                
+                <input [(ngModel)]="testData.name" class="form-control mb-2" type="text" placeholder="Title" id="Title" name="title">
+                <textarea [(ngModel)]="testData.des" class="form-control  mb-3" name="" id="" cols="10" rows="5" placeholder="Description"
+                    name="des" id="des"></textarea>
+                <div class="d-flex justify-content-end"> 
+                    <button (click)="update()" class="btn btn-warning ms-5 mb-5"> Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

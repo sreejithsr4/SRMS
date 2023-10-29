@@ -1,0 +1,27 @@
+.contain{
+    background-color: rgb(221, 227, 233);
+    margin: none;
+    padding: 50px;
+}
+.head{
+    background-color: white;
+   
+}
+.info{
+    background-color: white;
+}
+.button1{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 35px;
+    margin-right: 5px;
+  }
+  .button2{
+    background-color: rgb(212, 48, 75);
+    color: white;
+    border: none;
+    width: 80px;
+    height: 35px;
+  }

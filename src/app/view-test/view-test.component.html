@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="mb-3 mt-5">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a routerLink="/admin">Admin</a></li>
+              <li class="breadcrumb-item active" aria-current="page">View-Test</li>
+            </ol>
+          </nav>
+        <h1 class="text-center">Manage Tests</h1>
+    </div>
+    <div class="table-responsive-sm mb-5">
+ 
+            <table class="table table-bordered border-primary">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Test</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                    <th scope="col" colspan="3">Action</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of testData,let j = index">
+                    <th scope="row">{{j+1}}</th>
+                    <td>{{i.name}}</td>
+                    <td>{{i.des}}</td>
+                    <td>{{i.date}}</td>
+                    <td (click)="edit(i._id)"><i class="fa-solid fa-pen-to-square fa-lg" style="color: #54f028;"></i></td>
+                    <td (click)="delete(i.name)"><i class="fa-solid fa-trash fa-lg" style="color: #f6331e;"></i></td>
+                  <td><button (click)="publish(i._id)" class="button"><strong>Publish</strong></button></td>
+                </tr>
+                </tbody>
+              </table>
+
+    </div>
+</div>

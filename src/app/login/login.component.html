@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center m-5">
+<div class="col-sm-7">
+        <form action="" class="d-flex flex-column p-5 border border-dark" [formGroup]="adminLoginForm">
+            <h1>Login</h1>
+            <input formControlName="uname" class="form-control mb-3" type="text" placeholder="Username" id="uname" name="uname">
+            <input formControlName="psw" class="form-control mb-3" type="password" placeholder="Password" id="psw" name="psw">
+            <button (click)="login()" class="btn btn-success">Login</button>
+        </form>
+</div>
+</div>
+
