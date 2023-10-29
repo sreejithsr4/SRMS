@@ -95,3 +95,8 @@ p{
 h2{
   font-family: 'Oswald', sans-serif;
 }
+@media only screen and (max-width: 600px) {
+ .main-head {
+    font-size:xx-large;
+  }
+}
